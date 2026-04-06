@@ -10,113 +10,101 @@
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { background:#0A0906; color:#F0EBE0; font-family:'Cormorant Garamond',serif; font-weight:300; overflow-x:hidden; }
-
-/* NAV */
 nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:24px 60px; background:#0A0906; border-bottom:1px solid rgba(201,168,76,0.08); }
-.nav-logo { font-family:‘Syne’,sans-serif; font-weight:700; font-size:11px; letter-spacing:0.35em; text-transform:uppercase; color:#C9A84C; text-decoration:none; }
+.nav-logo { font-family:'Syne',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.35em; text-transform:uppercase; color:#C9A84C; text-decoration:none; }
 .nav-links { display:flex; gap:32px; list-style:none; align-items:center; }
-.nav-links a { font-family:‘Syne’,sans-serif; font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:#B8B0A0; text-decoration:none; transition:color 0.3s; }
+.nav-links a { font-family:'Syne',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:#B8B0A0; text-decoration:none; transition:color 0.3s; }
 .nav-links a:hover { color:#C9A84C; }
 .nav-ig svg { width:15px; height:15px; fill:#B8B0A0; transition:fill 0.3s; display:block; }
 .nav-ig:hover svg { fill:#C9A84C; }
-
-/* HERO */
 #hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:120px 60px 80px; position:relative; background:linear-gradient(160deg,#131108 0%,#0A0906 55%); }
 .hero-line { position:absolute; top:0; left:60px; width:1px; height:100%; background:linear-gradient(to bottom,transparent 5%,rgba(201,168,76,0.2) 30%,rgba(201,168,76,0.2) 70%,transparent 95%); }
-.hero-eyebrow { font-family:‘Syne’,sans-serif; font-size:10px; font-weight:500; letter-spacing:0.45em; text-transform:uppercase; color:#C9A84C; margin-bottom:24px; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
+.hero-eyebrow { font-family:'Syne',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.45em; text-transform:uppercase; color:#C9A84C; margin-bottom:24px; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
 .hero-name { font-weight:300; font-size:clamp(72px,11vw,150px); line-height:0.88; letter-spacing:-0.02em; color:#F0EBE0; opacity:0; animation:fadeUp 1s ease 0.4s forwards; }
 .hero-name em { font-style:italic; color:#C9A84C; }
 .hero-desc { margin-top:36px; font-style:italic; font-size:22px; line-height:1.6; color:#B8B0A0; max-width:500px; opacity:0; animation:fadeUp 0.8s ease 0.7s forwards; }
 .hero-scroll { position:absolute; bottom:40px; right:60px; display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; animation:fadeIn 0.8s ease 1.2s forwards; }
-.hero-scroll span { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#C9A84C; writing-mode:vertical-rl; }
+.hero-scroll span { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#C9A84C; writing-mode:vertical-rl; }
 .scroll-bar { width:1px; height:56px; background:linear-gradient(to bottom,#C9A84C,transparent); animation:pulse 2s ease infinite; }
-
-/* ABOUT */
 #about { padding:120px 60px; display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start; max-width:1200px; margin:0 auto; }
-.section-tag { font-family:‘Syne’,sans-serif; font-size:10px; font-weight:500; letter-spacing:0.4em; text-transform:uppercase; color:#C9A84C; margin-bottom:20px; display:flex; align-items:center; gap:14px; }
-.section-tag::before { content:’’; width:32px; height:1px; background:#C9A84C; }
+.section-tag { font-family:'Syne',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.4em; text-transform:uppercase; color:#C9A84C; margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+.section-tag::before { content:''; width:32px; height:1px; background:#C9A84C; }
 .about-heading { font-weight:300; font-size:clamp(44px,4.5vw,68px); line-height:1.05; color:#F0EBE0; }
 .about-heading em { font-style:italic; color:#C9A84C; }
 .about-body p { font-size:19px; line-height:1.9; color:#B8B0A0; margin-bottom:20px; }
 .pillars { display:flex; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid rgba(201,168,76,0.1); }
-.pillar-num { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.6; margin-bottom:4px; }
-.pillar-name { font-family:‘Syne’,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#F0EBE0; text-decoration:none; transition:color 0.3s; }
+.pillar-num { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.6; margin-bottom:4px; }
+.pillar-name { font-family:'Syne',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#F0EBE0; text-decoration:none; transition:color 0.3s; }
 .pillar-name:hover { color:#C9A84C; }
-
-/* DIVIDER */
 .divider { height:1px; background:linear-gradient(to right,transparent,rgba(201,168,76,0.2),transparent); margin:0 60px; }
-
-/* WORK */
+#currently { padding:100px 60px; max-width:1200px; margin:0 auto; }
+.current-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:0 80px; margin-top:48px; }
+.current-item { display:flex; align-items:flex-start; gap:18px; padding:24px 0; border-bottom:1px solid rgba(201,168,76,0.08); }
+.current-dot { width:5px; height:5px; border-radius:50%; background:#C9A84C; margin-top:12px; flex-shrink:0; }
+.current-text { font-size:20px; line-height:1.6; color:#B8B0A0; }
+.current-text em { font-style:italic; color:#F0EBE0; }
 #work { padding:100px 0; }
 .work-header { display:flex; align-items:center; gap:20px; padding:0 60px 32px; border-bottom:1px solid rgba(201,168,76,0.1); }
 .work-header-line { flex:1; height:1px; background:linear-gradient(to right,rgba(201,168,76,0.3),rgba(201,168,76,0.06)); }
 .work-row { display:grid; grid-template-columns:280px 1fr 220px; align-items:start; padding:48px 60px; border-bottom:1px solid rgba(201,168,76,0.08); gap:60px; transition:background 0.3s; }
 .work-row:hover { background:rgba(201,168,76,0.025); }
-.row-num { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.35; margin-bottom:8px; }
-.row-cat { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C; margin-bottom:12px; opacity:0.7; }
+.row-num { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.35; margin-bottom:8px; }
+.row-cat { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#C9A84C; margin-bottom:12px; opacity:0.7; }
 .row-title { font-weight:300; font-size:clamp(26px,2.2vw,38px); line-height:1.05; color:#F0EBE0; }
 .row-title em { font-style:italic; color:#C9A84C; }
 .row-desc { font-size:17px; line-height:1.85; color:#B8B0A0; }
 .row-right { display:flex; flex-direction:column; gap:16px; padding-top:4px; }
-.meta-k { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:#5A5248; margin-bottom:4px; }
+.meta-k { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:#5A5248; margin-bottom:4px; }
 .meta-v { font-size:15px; font-style:italic; color:#B8B0A0; }
 .meta-ig { font-size:14px; font-style:italic; color:#C9A84C; text-decoration:none; transition:color 0.3s; }
 .meta-ig:hover { color:#E8C97A; }
-
-/* NEWSLETTER */
 #newsletter { padding:100px 60px; max-width:1200px; margin:0 auto; }
 .nl-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
 .nl-heading { font-weight:300; font-size:clamp(38px,4vw,58px); line-height:1.05; color:#F0EBE0; margin-bottom:20px; }
 .nl-heading em { font-style:italic; color:#C9A84C; }
 .nl-sub { font-size:18px; line-height:1.8; color:#B8B0A0; max-width:380px; }
 .nl-right { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
-.nl-btn { display:inline-block; font-family:‘Syne’,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:#0A0906; background:#C9A84C; padding:16px 44px; text-decoration:none; transition:background 0.3s; width:fit-content; }
+.nl-btn { display:inline-block; font-family:'Syne',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:#0A0906; background:#C9A84C; padding:16px 44px; text-decoration:none; transition:background 0.3s; width:fit-content; }
 .nl-btn:hover { background:#E8C97A; }
-.nl-note { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#5A5248; }
-
-/* CONTACT */
+.nl-note { font-family:'Syne',sans-serif; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#5A5248; }
 #contact { padding:100px 60px; max-width:1200px; margin:0 auto; }
 .contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:80px; align-items:start; }
-.contact-tag { font-family:‘Syne’,sans-serif; font-size:10px; letter-spacing:0.4em; text-transform:uppercase; color:#C9A84C; margin-bottom:24px; opacity:0.8; display:flex; align-items:center; gap:14px; }
-.contact-tag::before { content:’’; width:32px; height:1px; background:#C9A84C; }
+.contact-tag { font-family:'Syne',sans-serif; font-size:10px; letter-spacing:0.4em; text-transform:uppercase; color:#C9A84C; margin-bottom:24px; opacity:0.8; display:flex; align-items:center; gap:14px; }
+.contact-tag::before { content:''; width:32px; height:1px; background:#C9A84C; }
 .contact-heading { font-weight:300; font-size:clamp(44px,5vw,72px); line-height:0.95; color:#F0EBE0; margin-bottom:28px; }
 .contact-heading em { font-style:italic; color:#C9A84C; }
 .contact-sub { font-size:18px; line-height:1.7; color:#B8B0A0; margin-bottom:28px; }
-.contact-email { display:inline-block; font-style:italic; font-size:19px; color:#C9A84C; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.3); padding-bottom:4px; transition:color 0.3s,border-color 0.3s; }
+.contact-email { display:inline-block; font-style:italic; font-size:19px; color:#C9A84C; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.3); padding-bottom:4px; transition:color 0.3s,border-color 0.3s; cursor:pointer; }
 .contact-email:hover { color:#E8C97A; border-color:#E8C97A; }
-.contact-location { margin-top:14px; font-family:‘Syne’,sans-serif; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#5A5248; }
+.contact-location { margin-top:14px; font-family:'Syne',sans-serif; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#5A5248; }
 .contact-form { display:flex; flex-direction:column; gap:14px; }
-.form-group input, .form-group textarea { width:100%; background:#131108; border:1px solid rgba(201,168,76,0.15); color:#F0EBE0; font-family:‘Cormorant Garamond’,serif; font-size:17px; padding:14px 18px; outline:none; transition:border-color 0.3s; resize:none; }
+.form-group input, .form-group textarea { width:100%; background:#131108; border:1px solid rgba(201,168,76,0.15); color:#F0EBE0; font-family:'Cormorant Garamond',serif; font-size:17px; padding:14px 18px; outline:none; transition:border-color 0.3s; resize:none; }
 .form-group input::placeholder, .form-group textarea::placeholder { color:#5A5248; font-style:italic; }
 .form-group input:focus, .form-group textarea:focus { border-color:rgba(201,168,76,0.45); }
-.form-btn { font-family:‘Syne’,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:#0A0906; background:#C9A84C; border:none; padding:16px 36px; cursor:pointer; align-self:flex-start; transition:background 0.3s; }
+.form-btn { font-family:'Syne',sans-serif; font-size:11px; font-weight:600; letter-spacing:0.3em; text-transform:uppercase; color:#0A0906; background:#C9A84C; border:none; padding:16px 36px; cursor:pointer; align-self:flex-start; transition:background 0.3s; }
 .form-btn:hover { background:#E8C97A; }
 .form-success { font-style:italic; font-size:16px; color:#C9A84C; display:none; margin-top:4px; }
-
-/* FOOTER */
 footer { padding:32px 60px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.05); margin-top:40px; }
-.footer-copy { font-family:‘Syne’,sans-serif; font-size:10px; letter-spacing:0.18em; color:#5A5248; }
+.footer-copy { font-family:'Syne',sans-serif; font-size:10px; letter-spacing:0.18em; color:#5A5248; }
 .footer-links { display:flex; align-items:center; gap:24px; }
-.footer-ig { display:flex; align-items:center; gap:7px; text-decoration:none; font-family:‘Syne’,sans-serif; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#5A5248; transition:color 0.3s; }
+.footer-ig { display:flex; align-items:center; gap:7px; text-decoration:none; font-family:'Syne',sans-serif; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#5A5248; transition:color 0.3s; }
 .footer-ig:hover { color:#C9A84C; }
 .footer-ig svg { width:13px; height:13px; fill:currentColor; }
 .footer-mark { font-style:italic; font-size:13px; color:#C9A84C; opacity:0.35; }
-
-/* ANIMATIONS */
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeIn { from{opacity:0} to{opacity:1} }
 @keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
-
-/* MOBILE */
 @media (max-width:860px) {
 nav { padding:18px 20px; flex-wrap:wrap; gap:10px; }
 .nav-links { gap:14px; }
 .nav-links a { font-size:9px; letter-spacing:0.12em; }
 #hero { padding:100px 20px 60px; }
-.hero-line { left:20px; }
+.hero-line { display:none; }
 .hero-scroll { right:20px; bottom:24px; }
 #about { grid-template-columns:1fr; gap:36px; padding:72px 20px; }
 .divider { margin:0 20px; }
+#currently { padding:72px 20px; }
+.current-grid { grid-template-columns:1fr; gap:0; }
 .work-header { padding:0 20px 28px; }
 .work-row { grid-template-columns:1fr; gap:20px; padding:32px 20px; }
 .row-right { flex-direction:row; flex-wrap:wrap; gap:20px; }
@@ -130,7 +118,6 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 .footer-links { flex-direction:column; gap:10px; }
 }
 </style>
-
 </head>
 <body>
 
@@ -172,45 +159,27 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 
 <div class="divider"></div>
 
-<!-- CURRENTLY -->
-
 <section id="currently">
-<div class="current-inner">
 <div class="section-tag">Currently</div>
 <div class="current-grid">
-<div class="current-item">
-<div class="current-dot"></div>
-<p class="current-text">Finalizing the pilot for <em>Two Minutes</em></p>
-</div>
-<div class="current-item">
-<div class="current-dot"></div>
-<p class="current-text">In conversation with partners for <em>STILL</em></p>
-</div>
-<div class="current-item">
-<div class="current-dot"></div>
-<p class="current-text">Building AquaGuard infrastructure for West Africa</p>
-</div>
-<div class="current-item">
-<div class="current-dot"></div>
-<p class="current-text">Executive producing a new Afrobeat cross-cultural collaboration</p>
-</div>
-</div>
+<div class="current-item"><div class="current-dot"></div><p class="current-text">Finalizing the pilot for <em>Two Minutes</em></p></div>
+<div class="current-item"><div class="current-dot"></div><p class="current-text">In conversation with partners for <em>STILL</em></p></div>
+<div class="current-item"><div class="current-dot"></div><p class="current-text">Building AquaGuard infrastructure for West Africa</p></div>
+<div class="current-item"><div class="current-dot"></div><p class="current-text">Executive producing a new Afrobeat cross-cultural collaboration</p></div>
 </div>
 </section>
+
+<div class="divider"></div>
+
+<section id="work">
 <div class="work-header">
 <span class="section-tag" style="margin-bottom:0">Selected Work</span>
 <div class="work-header-line"></div>
 </div>
 
 <div class="work-row" id="work-film">
-<div class="row-left">
-<div class="row-num">01</div>
-<div class="row-cat">Film · Television</div>
-<h3 class="row-title">Film <em>&amp;</em> Television</h3>
-</div>
-<div class="row-mid">
-<p class="row-desc"><em>STILL</em> is a docuseries about the quiet interior of human transformation — grief, stillness, and becoming. <em>Two Minutes</em> is a prestige limited series with a completed pilot and full production package, co-produced with Téa Fierro. Both projects are built for the kind of storytelling that stays with you. If you fund, distribute, or develop work that matters — let's talk.</p>
-</div>
+<div class="row-left"><div class="row-num">01</div><div class="row-cat">Film · Television</div><h3 class="row-title">Film <em>&amp;</em> Television</h3></div>
+<div class="row-mid"><p class="row-desc"><em>STILL</em> is a docuseries about the quiet interior of human transformation — grief, stillness, and becoming. <em>Two Minutes</em> is a prestige limited series with a completed pilot and full production package, co-produced with Téa Fierro. Both projects are built for the kind of storytelling that stays with you. If you fund, distribute, or develop work that matters — let's talk.</p></div>
 <div class="row-right">
 <div><div class="meta-k">Projects</div><div class="meta-v">STILL · Two Minutes</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Creator · Executive Producer</div></div>
@@ -218,14 +187,8 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 
 <div class="work-row" id="work-music">
-<div class="row-left">
-<div class="row-num">02</div>
-<div class="row-cat">Music</div>
-<h3 class="row-title">Music <em>Executive</em></h3>
-</div>
-<div class="row-mid">
-<p class="row-desc">The bridge between worlds — connecting foreign emerging talent with Afrobeat emerging artists to build collaborations that are culturally grounded and commercially structured. From deal architecture to creative direction, the work is handled end to end. If you're an artist, label, or brand looking to move across markets, this is the conversation to have.</p>
-</div>
+<div class="row-left"><div class="row-num">02</div><div class="row-cat">Music</div><h3 class="row-title">Music <em>Executive</em></h3></div>
+<div class="row-mid"><p class="row-desc">The bridge between worlds — connecting foreign emerging talent with Afrobeat emerging artists to build collaborations that are culturally grounded and commercially structured. From deal architecture to creative direction, the work is handled end to end. If you're an artist, label, or brand looking to move across markets, this is the conversation to have.</p></div>
 <div class="row-right">
 <div><div class="meta-k">Specialty</div><div class="meta-v">Cross-Cultural Collaboration</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Executive Producer</div></div>
@@ -233,14 +196,8 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 
 <div class="work-row" id="work-tech">
-<div class="row-left">
-<div class="row-num">03</div>
-<div class="row-cat">Technology · IoT</div>
-<h3 class="row-title">AquaGuard</h3>
-</div>
-<div class="row-mid">
-<p class="row-desc">Water is infrastructure. AquaGuard is an IoT-powered platform that monitors water quality in real time — built specifically for the gaps that legacy systems don't reach. If you're working on public health, infrastructure investment, or emerging market technology, this is where precision meets purpose.</p>
-</div>
+<div class="row-left"><div class="row-num">03</div><div class="row-cat">Technology · IoT</div><h3 class="row-title">AquaGuard</h3></div>
+<div class="row-mid"><p class="row-desc">Water is infrastructure. AquaGuard is an IoT-powered platform that monitors water quality in real time — built specifically for the gaps that legacy systems don't reach. If you're working on public health, infrastructure investment, or emerging market technology, this is where precision meets purpose.</p></div>
 <div class="row-right">
 <div><div class="meta-k">Region</div><div class="meta-v">Nigeria / West Africa</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Founder</div></div>
@@ -248,14 +205,8 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 
 <div class="work-row">
-<div class="row-left">
-<div class="row-num">04</div>
-<div class="row-cat">Policy · Intelligence</div>
-<h3 class="row-title">Persecuted <em>Nigeria</em></h3>
-</div>
-<div class="row-mid">
-<p class="row-desc">A conflict and persecution intelligence platform that turns complex, on-the-ground Nigerian realities into structured, decision-ready insight. Built for policymakers, researchers, and institutions where accuracy and clarity aren't optional — they're the work.</p>
-</div>
+<div class="row-left"><div class="row-num">04</div><div class="row-cat">Policy · Intelligence</div><h3 class="row-title">Persecuted <em>Nigeria</em></h3></div>
+<div class="row-mid"><p class="row-desc">A conflict and persecution intelligence platform that turns complex, on-the-ground Nigerian realities into structured, decision-ready insight. Built for policymakers, researchers, and institutions where accuracy and clarity aren't optional — they're the work.</p></div>
 <div class="row-right">
 <div><div class="meta-k">Audience</div><div class="meta-v">Policymakers · Researchers</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Founder</div></div>
@@ -263,21 +214,14 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 
 <div class="work-row" id="work-brand">
-<div class="row-left">
-<div class="row-num">05</div>
-<div class="row-cat">Brand · Operations</div>
-<h3 class="row-title">Everyday <em>Bread</em></h3>
-</div>
-<div class="row-mid">
-<p class="row-desc">A faith-informed clothing brand built on identity and intention. The role here goes beyond creative direction — it spans brand architecture, operational systems, and campaign execution. If you have a brand that needs both vision and infrastructure, that's a specific kind of work. It's what gets done here.</p>
-</div>
+<div class="row-left"><div class="row-num">05</div><div class="row-cat">Brand · Operations</div><h3 class="row-title">Everyday <em>Bread</em></h3></div>
+<div class="row-mid"><p class="row-desc">A faith-informed clothing brand built on identity and intention. The role here goes beyond creative direction — it spans brand architecture, operational systems, and campaign execution. If you have a brand that needs both vision and infrastructure, that's a specific kind of work. It's what gets done here.</p></div>
 <div class="row-right">
 <div><div class="meta-k">Sector</div><div class="meta-v">Faith · Apparel · Brand</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Brand Architect · Ops Lead</div></div>
 <div><div class="meta-k">Instagram</div><a href="https://www.instagram.com/everydaybreadofficial" target="_blank" class="meta-ig">@everydaybreadofficial</a></div>
 </div>
 </div>
-
 </section>
 
 <div class="divider"></div>
@@ -304,11 +248,11 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 <p class="contact-tag">Get in Touch</p>
 <h2 class="contact-heading">Let's<br><em>Connect</em></h2>
 <p class="contact-sub">Open to collaboration, partnership, and conversations worth having.</p>
-<a href="/cdn-cgi/l/email-protection#a6cec3cacac9e6c7cbc7d4c7c7c8cfc3cdc388c5c9cb" class="contact-email"><span class="__cf_email__" data-cfemail="3d55585151527d5c505c4f5c5c5354585658135e5250">[email&#160;protected]</span></a>
+<span class="contact-email" id="cemail">hello [at] amaraanieke.com</span>
 <p class="contact-location">Minneapolis</p>
 </div>
 <div class="contact-right">
-<form class="contact-form" onsubmit="handleSubmit(event)">
+<form class="contact-form" id="cform">
 <div class="form-group"><input type="text" id="fname" placeholder="Your name" required /></div>
 <div class="form-group"><input type="email" id="femail" placeholder="Your email" required /></div>
 <div class="form-group"><textarea id="fmessage" placeholder="Your message" rows="5" required></textarea></div>
@@ -320,7 +264,7 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </section>
 
 <footer>
-<span class="footer-copy">© 2026 Amara Anieke. All rights reserved.</span>
+<span class="footer-copy">&#169; 2026 Amara Anieke. All rights reserved.</span>
 <div class="footer-links">
 <a href="https://instagram.com/albie_xo" target="_blank" class="footer-ig">
 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -330,12 +274,38 @@ Instagram
 </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+(function() {
+var u = 'hello';
+var d = 'amaraanieke' + '.com';
+var full = u + '@' + d;
 
-function handleSubmit(e) {
+// Set display email
+var el = document.getElementById('cemail');
+if (el) {
+el.textContent = full;
+el.style.cursor = 'pointer';
+el.addEventListener('click', function() {
+window.location.href = 'mailto:' + full;
+});
+}
+
+// Form submit
+var form = document.getElementById('cform');
+if (form) {
+form.addEventListener('submit', function(e) {
 e.preventDefault();
-var name = document.getElementById(‘fname’).value;
-var email = document.getElementById(‘femail’).value;
-var message = document.getElementById(‘fmessage’).value;
-var subject = encodeURIComponent(‘Message from ’ + name + ’ via amaraanieke.com’);
-var body = encodeURIComponent(’Name: ’ + n
+var name = document.getElementById('fname').value;
+var email = document.getElementById('femail').value;
+var msg = document.getElementById('fmessage').value;
+var sub = encodeURIComponent('Message from ' + name + ' via amaraanieke.com');
+var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + msg);
+document.getElementById('form-success').style.display = 'block';
+window.location.href = 'mailto:' + full + '?subject=' + sub + '&body=' + body;
+});
+}
+})();
+</script>
+
+</body>
+</html>
