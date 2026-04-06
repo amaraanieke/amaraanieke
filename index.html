@@ -8,39 +8,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-:root {
---gold: #C9A84C;
---gold-light: #E8C97A;
---white: #F0EBE0;
---dim: #B8B0A0;
---dark: #0A0906;
---card: #131108;
---border: rgba(201,168,76,0.12);
---gray: #5A5248;
-}
-html { scroll-behavior: smooth; }
-body { background: #0A0906; color: #F0EBE0; font-family: 'Cormorant Garamond', serif; font-weight: 300; overflow-x: hidden; }
+html { scroll-behavior:smooth; }
+body { background:#0A0906; color:#F0EBE0; font-family:'Cormorant Garamond',serif; font-weight:300; overflow-x:hidden; }
 
 /* NAV */
-nav { position: fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:24px 60px; background:#0A0906; border-bottom:1px solid rgba(201,168,76,0.08); }
+nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; justify-content:space-between; align-items:center; padding:24px 60px; background:#0A0906; border-bottom:1px solid rgba(201,168,76,0.08); }
 .nav-logo { font-family:‘Syne’,sans-serif; font-weight:700; font-size:11px; letter-spacing:0.35em; text-transform:uppercase; color:#C9A84C; text-decoration:none; }
 .nav-links { display:flex; gap:32px; list-style:none; align-items:center; }
 .nav-links a { font-family:‘Syne’,sans-serif; font-size:10px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:#B8B0A0; text-decoration:none; transition:color 0.3s; }
 .nav-links a:hover { color:#C9A84C; }
-.nav-ig { display:flex; align-items:center; }
-.nav-ig svg { width:15px; height:15px; fill:#B8B0A0; transition:fill 0.3s; }
+.nav-ig svg { width:15px; height:15px; fill:#B8B0A0; transition:fill 0.3s; display:block; }
 .nav-ig:hover svg { fill:#C9A84C; }
 
 /* HERO */
-#hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:120px 60px 80px; position:relative; background:linear-gradient(160deg, #131108 0%, #0A0906 55%); }
-.hero-line { position:absolute; top:0; left:60px; width:1px; height:100%; background:linear-gradient(to bottom, transparent 5%, rgba(201,168,76,0.2) 30%, rgba(201,168,76,0.2) 70%, transparent 95%); }
+#hero { min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; padding:120px 60px 80px; position:relative; background:linear-gradient(160deg,#131108 0%,#0A0906 55%); }
+.hero-line { position:absolute; top:0; left:60px; width:1px; height:100%; background:linear-gradient(to bottom,transparent 5%,rgba(201,168,76,0.2) 30%,rgba(201,168,76,0.2) 70%,transparent 95%); }
 .hero-eyebrow { font-family:‘Syne’,sans-serif; font-size:10px; font-weight:500; letter-spacing:0.45em; text-transform:uppercase; color:#C9A84C; margin-bottom:24px; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
 .hero-name { font-weight:300; font-size:clamp(72px,11vw,150px); line-height:0.88; letter-spacing:-0.02em; color:#F0EBE0; opacity:0; animation:fadeUp 1s ease 0.4s forwards; }
 .hero-name em { font-style:italic; color:#C9A84C; }
 .hero-desc { margin-top:36px; font-style:italic; font-size:22px; line-height:1.6; color:#B8B0A0; max-width:500px; opacity:0; animation:fadeUp 0.8s ease 0.7s forwards; }
 .hero-scroll { position:absolute; bottom:40px; right:60px; display:flex; flex-direction:column; align-items:center; gap:10px; opacity:0; animation:fadeIn 0.8s ease 1.2s forwards; }
 .hero-scroll span { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#C9A84C; writing-mode:vertical-rl; }
-.scroll-bar { width:1px; height:56px; background:linear-gradient(to bottom, #C9A84C, transparent); animation:pulse 2s ease infinite; }
+.scroll-bar { width:1px; height:56px; background:linear-gradient(to bottom,#C9A84C,transparent); animation:pulse 2s ease infinite; }
 
 /* ABOUT */
 #about { padding:120px 60px; display:grid; grid-template-columns:1fr 1.5fr; gap:80px; align-items:start; max-width:1200px; margin:0 auto; }
@@ -51,15 +40,16 @@ nav { position: fixed; top:0; left:0; right:0; z-index:200; display:flex; justif
 .about-body p { font-size:19px; line-height:1.9; color:#B8B0A0; margin-bottom:20px; }
 .pillars { display:flex; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid rgba(201,168,76,0.1); }
 .pillar-num { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.6; margin-bottom:4px; }
-.pillar-name { font-family:‘Syne’,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#F0EBE0; }
+.pillar-name { font-family:‘Syne’,sans-serif; font-size:11px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#F0EBE0; text-decoration:none; transition:color 0.3s; }
+.pillar-name:hover { color:#C9A84C; }
 
 /* DIVIDER */
-.divider { height:1px; background:linear-gradient(to right, transparent, rgba(201,168,76,0.2), transparent); margin:0 60px; }
+.divider { height:1px; background:linear-gradient(to right,transparent,rgba(201,168,76,0.2),transparent); margin:0 60px; }
 
 /* WORK */
 #work { padding:100px 0; }
-.work-header { display:flex; align-items:center; gap:20px; padding:0 60px; margin-bottom:0; padding-bottom:32px; border-bottom:1px solid rgba(201,168,76,0.1); }
-.work-header-line { flex:1; height:1px; background:linear-gradient(to right, rgba(201,168,76,0.3), rgba(201,168,76,0.08)); }
+.work-header { display:flex; align-items:center; gap:20px; padding:0 60px 32px; border-bottom:1px solid rgba(201,168,76,0.1); }
+.work-header-line { flex:1; height:1px; background:linear-gradient(to right,rgba(201,168,76,0.3),rgba(201,168,76,0.06)); }
 .work-row { display:grid; grid-template-columns:280px 1fr 220px; align-items:start; padding:48px 60px; border-bottom:1px solid rgba(201,168,76,0.08); gap:60px; transition:background 0.3s; }
 .work-row:hover { background:rgba(201,168,76,0.025); }
 .row-num { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.3em; color:#C9A84C; opacity:0.35; margin-bottom:8px; }
@@ -70,6 +60,8 @@ nav { position: fixed; top:0; left:0; right:0; z-index:200; display:flex; justif
 .row-right { display:flex; flex-direction:column; gap:16px; padding-top:4px; }
 .meta-k { font-family:‘Syne’,sans-serif; font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:#5A5248; margin-bottom:4px; }
 .meta-v { font-size:15px; font-style:italic; color:#B8B0A0; }
+.meta-ig { font-size:14px; font-style:italic; color:#C9A84C; text-decoration:none; transition:color 0.3s; }
+.meta-ig:hover { color:#E8C97A; }
 
 /* NEWSLETTER */
 #newsletter { padding:100px 60px; max-width:1200px; margin:0 auto; }
@@ -90,7 +82,7 @@ nav { position: fixed; top:0; left:0; right:0; z-index:200; display:flex; justif
 .contact-heading { font-weight:300; font-size:clamp(44px,5vw,72px); line-height:0.95; color:#F0EBE0; margin-bottom:28px; }
 .contact-heading em { font-style:italic; color:#C9A84C; }
 .contact-sub { font-size:18px; line-height:1.7; color:#B8B0A0; margin-bottom:28px; }
-.contact-email { display:inline-block; font-style:italic; font-size:19px; color:#C9A84C; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.3); padding-bottom:4px; transition:color 0.3s, border-color 0.3s; }
+.contact-email { display:inline-block; font-style:italic; font-size:19px; color:#C9A84C; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.3); padding-bottom:4px; transition:color 0.3s,border-color 0.3s; }
 .contact-email:hover { color:#E8C97A; border-color:#E8C97A; }
 .contact-location { margin-top:14px; font-family:‘Syne’,sans-serif; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#5A5248; }
 .contact-form { display:flex; flex-direction:column; gap:14px; }
@@ -116,7 +108,7 @@ footer { padding:32px 60px; display:flex; justify-content:space-between; align-i
 @keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:1} }
 
 /* MOBILE */
-@media (max-width: 860px) {
+@media (max-width:860px) {
 nav { padding:18px 20px; flex-wrap:wrap; gap:10px; }
 .nav-links { gap:14px; }
 .nav-links a { font-size:9px; letter-spacing:0.12em; }
@@ -125,7 +117,7 @@ nav { padding:18px 20px; flex-wrap:wrap; gap:10px; }
 .hero-scroll { right:20px; bottom:24px; }
 #about { grid-template-columns:1fr; gap:36px; padding:72px 20px; }
 .divider { margin:0 20px; }
-.work-header { padding:0 20px; padding-bottom:28px; }
+.work-header { padding:0 20px 28px; }
 .work-row { grid-template-columns:1fr; gap:20px; padding:32px 20px; }
 .row-right { flex-direction:row; flex-wrap:wrap; gap:20px; }
 #newsletter { padding:72px 20px; }
@@ -149,28 +141,17 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 <li><a href="#work">Work</a></li>
 <li><a href="#newsletter">Newsletter</a></li>
 <li><a href="#contact">Contact</a></li>
-<li>
-<a href="https://instagram.com/albie_xo" target="_blank" class="nav-ig" aria-label="Instagram">
-<svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-</a>
-</li>
+<li><a href="https://instagram.com/albie_xo" target="_blank" class="nav-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
 </ul>
 </nav>
-
-<!-- HERO -->
 
 <section id="hero">
 <div class="hero-line"></div>
 <p class="hero-eyebrow">Creative Entrepreneur &nbsp;·&nbsp; Executive Producer &nbsp;·&nbsp; Innovator</p>
 <h1 class="hero-name">Amara<br><em>Anieke</em></h1>
-<p class="hero-desc">Building at the intersection of technology, music, and film.</p>
-<div class="hero-scroll">
-<div class="scroll-bar"></div>
-<span>Scroll</span>
-</div>
+<p class="hero-desc">This didn't happen by accident.</p>
+<div class="hero-scroll"><div class="scroll-bar"></div><span>Scroll</span></div>
 </section>
-
-<!-- ABOUT -->
 
 <section id="about">
 <div>
@@ -181,25 +162,47 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 <p>Creative entrepreneur and executive producer building across technology, film, music, and brand — with the same systems precision in every room. The background is engineering. The instinct is creative. The output is impact.</p>
 <p>Whether the need is infrastructure, storytelling, artist development, or brand architecture — the work gets done with intention, structure, and an eye for what lasts.</p>
 <div class="pillars">
-<div class="pillar"><div class="pillar-num">01</div><div class="pillar-name">Technology</div></div>
-<div class="pillar"><div class="pillar-num">02</div><div class="pillar-name">Film</div></div>
-<div class="pillar"><div class="pillar-num">03</div><div class="pillar-name">Music</div></div>
-<div class="pillar"><div class="pillar-num">04</div><div class="pillar-name">Brand</div></div>
+<div class="pillar"><div class="pillar-num">01</div><a href="#work-film" class="pillar-name">Film</a></div>
+<div class="pillar"><div class="pillar-num">02</div><a href="#work-music" class="pillar-name">Music</a></div>
+<div class="pillar"><div class="pillar-num">03</div><a href="#work-tech" class="pillar-name">Technology</a></div>
+<div class="pillar"><div class="pillar-num">04</div><a href="#work-brand" class="pillar-name">Brand</a></div>
 </div>
 </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- WORK -->
+<!-- CURRENTLY -->
 
-<section id="work">
+<section id="currently">
+<div class="current-inner">
+<div class="section-tag">Currently</div>
+<div class="current-grid">
+<div class="current-item">
+<div class="current-dot"></div>
+<p class="current-text">Finalizing the pilot for <em>Two Minutes</em></p>
+</div>
+<div class="current-item">
+<div class="current-dot"></div>
+<p class="current-text">In conversation with partners for <em>STILL</em></p>
+</div>
+<div class="current-item">
+<div class="current-dot"></div>
+<p class="current-text">Building AquaGuard infrastructure for West Africa</p>
+</div>
+<div class="current-item">
+<div class="current-dot"></div>
+<p class="current-text">Executive producing a new Afrobeat cross-cultural collaboration</p>
+</div>
+</div>
+</div>
+</section>
 <div class="work-header">
 <span class="section-tag" style="margin-bottom:0">Selected Work</span>
 <div class="work-header-line"></div>
 </div>
 
-<div class="work-row">
+<div class="work-row" id="work-film">
 <div class="row-left">
 <div class="row-num">01</div>
 <div class="row-cat">Film · Television</div>
@@ -214,7 +217,7 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 </div>
 
-<div class="work-row">
+<div class="work-row" id="work-music">
 <div class="row-left">
 <div class="row-num">02</div>
 <div class="row-cat">Music</div>
@@ -229,7 +232,7 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 </div>
 
-<div class="work-row">
+<div class="work-row" id="work-tech">
 <div class="row-left">
 <div class="row-num">03</div>
 <div class="row-cat">Technology · IoT</div>
@@ -259,7 +262,7 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 </div>
 </div>
 
-<div class="work-row">
+<div class="work-row" id="work-brand">
 <div class="row-left">
 <div class="row-num">05</div>
 <div class="row-cat">Brand · Operations</div>
@@ -271,14 +274,13 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 <div class="row-right">
 <div><div class="meta-k">Sector</div><div class="meta-v">Faith · Apparel · Brand</div></div>
 <div><div class="meta-k">Role</div><div class="meta-v">Brand Architect · Ops Lead</div></div>
+<div><div class="meta-k">Instagram</div><a href="https://www.instagram.com/everydaybreadofficial" target="_blank" class="meta-ig">@everydaybreadofficial</a></div>
 </div>
 </div>
 
 </section>
 
 <div class="divider"></div>
-
-<!-- NEWSLETTER -->
 
 <section id="newsletter">
 <div class="nl-inner">
@@ -296,30 +298,26 @@ footer { padding:24px 20px; flex-direction:column; gap:14px; text-align:center; 
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
-
 <section id="contact">
 <div class="contact-grid">
 <div class="contact-left">
 <p class="contact-tag">Get in Touch</p>
 <h2 class="contact-heading">Let's<br><em>Connect</em></h2>
 <p class="contact-sub">Open to collaboration, partnership, and conversations worth having.</p>
-<a href="/cdn-cgi/l/email-protection#375f525b5b5877565a56455656595e525c521954585a" class="contact-email"><span class="__cf_email__" data-cfemail="0b636e6767644b6a666a796a6a65626e606e25686466">[email&#160;protected]</span></a>
+<a href="/cdn-cgi/l/email-protection#a6cec3cacac9e6c7cbc7d4c7c7c8cfc3cdc388c5c9cb" class="contact-email"><span class="__cf_email__" data-cfemail="3d55585151527d5c505c4f5c5c5354585658135e5250">[email&#160;protected]</span></a>
 <p class="contact-location">Minneapolis</p>
 </div>
 <div class="contact-right">
 <form class="contact-form" onsubmit="handleSubmit(event)">
-<div class="form-group"><input type="text" placeholder="Your name" required /></div>
-<div class="form-group"><input type="email" placeholder="Your email" required /></div>
-<div class="form-group"><textarea placeholder="Your message" rows="5" required></textarea></div>
+<div class="form-group"><input type="text" id="fname" placeholder="Your name" required /></div>
+<div class="form-group"><input type="email" id="femail" placeholder="Your email" required /></div>
+<div class="form-group"><textarea id="fmessage" placeholder="Your message" rows="5" required></textarea></div>
 <button type="submit" class="form-btn">Send Message</button>
-<p class="form-success" id="form-success">Message sent — I'll be in touch.</p>
+<p class="form-success" id="form-success">Opening your email app — almost there.</p>
 </form>
 </div>
 </div>
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 <span class="footer-copy">© 2026 Amara Anieke. All rights reserved.</span>
@@ -336,5 +334,8 @@ Instagram
 
 function handleSubmit(e) {
 e.preventDefault();
-var btn = e.target.querySelector(’.form-btn’);
-var success = document.getElementById(’
+var name = document.getElementById(‘fname’).value;
+var email = document.getElementById(‘femail’).value;
+var message = document.getElementById(‘fmessage’).value;
+var subject = encodeURIComponent(‘Message from ’ + name + ’ via amaraanieke.com’);
+var body = encodeURIComponent(’Name: ’ + n
